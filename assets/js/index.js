@@ -23,7 +23,7 @@ var getData = async function(){
 	}
 	catch(err){
 		console.warn('Something went wrong.', err);
-		alert('Something went wrong. Please Retry');
+		console.log('Something went wrong. Please Retry');
 	}
 	finally{
 		loaderEle.classList.toggle("loaderShow");
