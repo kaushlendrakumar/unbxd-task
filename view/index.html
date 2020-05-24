@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Unboxd | Search</title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../assets/css/index.css">
+</head>
+<body>
+	<div class="container">
+		<!-- start header -->
+		<div class="header-row">
+		  <div class="logo">
+		  	<a href="http://demo-unbxd.unbxdapi.com/" target="_blank">
+		  		<img src="../assets/img/logo.png" lat="logo">
+		  	</a>
+		  </div>
+		  <div class="hamburger" id="hamburger" onclick="toggleHamburger()">
+		  	<img src="../assets/img/hamburger.jpg" alt="hamburger-icon" />
+		  </div>
+		</div>
+		<!-- end header -->
+
+		<div class="page-container">
+			<!-- start search row -->
+			<div class="search-header">
+				<input id="search-input" onkeyup="globalSearch()" type="text" debounce="2000" placeholder="Search..." class="search-input" />
+			</div>
+			<!-- end search row -->
+
+			<!-- start filter container -->
+			<div class="left-nav-container" id="filters-container"></div>
+			<!-- end filter container -->
+
+			<div class="right-body-container">
+				<!-- start banner -->
+				<div class="banner-container">
+					<img id="banner-image" src="banner.png" alt="banner-image">
+				</div>
+				<!-- end banner -->
+
+				<!-- start show total count -->
+				<div class="item-short-detail-row">
+					<div class="left-col">
+						<span class="search-item">dress</span>
+						<span class="search-item-count"> - <span id="total-count">0</span> item</span>
+					</div>
+				</div>
+				<!-- end show total count -->
+
+				<!-- start product list container -->
+				<div class="list-container" id="product-list-container"></div>
+				<!-- end product list container -->
+
+				<!-- start pagination container -->
+				<div class="pagination-container">
+					<ul id="pagination-list"></ul>
+				</div>
+				<!-- end pagination container -->
+			</div>	
+		</div>		
+	</div>
+
+	<div id="loader"></div>
+
+	<script type="text/javascript" src="../assets/js/index.js"></script>
+</body>
+</html>
